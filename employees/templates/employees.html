@@ -32,7 +32,7 @@
             <td>{{ employee.department }}</td>
             <td>{{ employee.contract_exp }}</td>
             <td>
-              <a href="{% url 'single_employee' employee.id %}">See More</a>
+              <a href="{% url 'app:single_employee' employee.id %}">See More</a>
               {% comment %} <a href="{{ employee.id }}">See More</a> {% endcomment %}
               {% comment %} <a href="/employees/{{ employee.id }}">See More</a> {% endcomment %}
             </td>
