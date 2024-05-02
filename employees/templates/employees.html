@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  All Employees
+{% endblock %}
+
+{% block employees_template %}
+  <div class="table-responsive mt-5">
+    <table class="table table-hover table-bordered table-primary">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>FIRSTNAME</th>
+          <th>LASTNAME</th>
+          <th>EMAIL</th>
+          <th>IS MARRIED</th>
+          <th>SALLARY</th>
+          <th>DEPARTMENT</th>
+          <th>CONTACT EXP</th>
+          <th>INFO</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for employee in employees %}
+          <tr>
+            <th>{{ employee.id }}</th>
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.is_married }}</td>
+            <td>{{ employee.salary }}</td>
+            <td>{{ employee.department }}</td>
+            <td>{{ employee.contract_exp }}</td>
+            <td>
+              <a href="{% url 'single_employee' employee.id %}">See More</a>
+              {% comment %} <a href="{{ employee.id }}">See More</a> {% endcomment %}
+              {% comment %} <a href="/employees/{{ employee.id }}">See More</a> {% endcomment %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

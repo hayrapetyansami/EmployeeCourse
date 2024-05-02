@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  About {{ employee.first_name }} {{ employee.last_name }}
+{% endblock %}
+
+{% block single_employee_template %}
+  <div class="card mt-5">
+    <div class="card-header">
+      <h1>{{ employee.first_name }} {{ employee.last_name }}</h1>
+    </div>
+    <div class="card-body">
+      <h4>Email: {{ employee.email }}</h4>
+      <h5>Is Married: {{ employee.is_married }}</h5>
+      <h5>Salary: {{ employee.salary }}</h5>
+      <h5>Contract Exp: {{ employee.contract_exp }}</h5>
+      <h5>Department: {{ employee.department }}</h5>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+1. ստեղծում ենք Django պրոյեկտ
+(Ջանգո ադմին ստեղծիր պրոյեկտ base անունով ստեղ)
+django-admin startproject base .
+
+2. manage.py ԱՄԵՆԱԿԱՐԵՎՈՐ ՖԱՅԼՆ Է
+
+3. pipenv shell-ով ակտիվացնում ենք վիրտուալ էնվը
+
+4. run ենք անում django server-ը
+python manage.py runserver
+
+5. python manage.py startapp (app-ի անուն)
+
+6. python manage.py migrate
+
+7. python manage.py createsuperuser
+login: johnsmith
+email: johnsmith@employees.com
+password: qwerty#045
+
+8. python manage.py makemigrations (որից հետո անպայման python manage.py migrate)
+
+MODELS
+SOME.objects.all() -> DBից ստանում ենք էտ թեյբլի ինֆորմացիան
+dep (փոփոխական) = SOME(title="IT") -> IT-ն փոխանցում ենք SOME կլասսի կոնստրուկտորի մեջ
+dep.save() -> DB-ում պահպանում ենք փոփոխությունը
+SOME.objects.get(pk=1) -> ստանում ենք 1 ID ունեցող տվյալը
+SOME.objects.filter(title="IT")
+SOME.objects.filter(id=1)
+
+
+______________
+
+GIT
+
+U - untracked (գիտը տեսնում բայց չի հետևում)
+A - added (գիտը արդեն հետևում ա փոփոխություններին)
+M - modified (գիտը տեսել ա փոփոխություն ու պահպանել ա իր մեջ)
+
+git init (կանչում ենք git-ը)
+git status (մեր պրոյեկտի ստատուսը)
+git add . (բոլոր untracked ֆայլ/ֆոլդրները դարձնում ենք added)
