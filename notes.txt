@@ -41,3 +41,5 @@ git init (կանչում ենք git-ը)
 git status (մեր պրոյեկտի ստատուսը)
 git add . (բոլոր untracked ֆայլ/ֆոլդրները դարձնում ենք added)
 git commit -m "your commit"
+git log (տեսնում ենք մեր commit-ները)
+git show (տեսնում ենք փոփոխությնունները)
