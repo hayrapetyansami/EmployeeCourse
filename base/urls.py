@@ -15,8 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api.models import DepartmentResource, EmployeeResource
+from tastypie.api import Api
+
+api = Api(api_name="v1")
+d_resource = DepartmentResource()
+e_resource = EmployeeResource()
+api.register(d_resource)
+api.register(e_resource)
+
+# api/v1/departments
+# api/v1/employees
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("employees.urls"))
+    path("", include("employees.urls")),
+    path("api/", include(api.urls)),
 ]
