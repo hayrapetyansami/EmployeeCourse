@@ -18,14 +18,15 @@ class EmployeeResource(ModelResource):
         allowed_methods = ["get", "post", "delete"]
         authentication = CustomAuthentication()
         authorization = Authorization()
-        excludes = ['contract_exp', 'created_at']
+        excludes = ['contract_exp', 'created_at', "is_married"]
 
     def hydrate(self, bundle):
         bundle.obj.department_id = bundle.data["department_id"]
         return bundle
 
     def dehydrate(self, bundle):
-        bundle.data["department_id"] = bundle.obj.department
+        bundle.data["department_id"] = bundle.obj.department_id
+        bundle.data["department"] = bundle.obj.department
         return bundle
 
     def dehydrate_email(self, bundle):
