@@ -8,5 +8,7 @@ urlpatterns = [
     path('contact/', views.contact, name="contact"),
     path('employees/', views.employees, name="employees"),
     path('employees/<int:employee_id>',
-         views.single_employee, name="single_employee")
+         views.single_employee, name="single_employee"),
+    path('about/<int:member_id>',
+         views.single_member, name="single_member")
 ]

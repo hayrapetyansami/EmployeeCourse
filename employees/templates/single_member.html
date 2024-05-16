@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  About {{ member.first_name }} {{ member.last_name }}
+{% endblock %}
+
+{% block single_team_template %}
+  <div class="card mt-5">
+    <div class="card-header">
+      <h1>{{ member.first_name }} {{ member.last_name }}</h1>
+    </div>
+    <div class="card-body">
+      <img class="img-thumbnail" src="{{member.avatar.url}}"  alt="{{member.first_name}}">
+      <h4>Position: {{ member.position }}</h4>
+      <h4>About: {{ member.about }}</h4>
+    </div>
+  </div>
+{% endblock %}

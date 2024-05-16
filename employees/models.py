@@ -9,6 +9,10 @@ class Department(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name = "department"
+        verbose_name_plural = "departments"
+
 
 class Employee(models.Model):
     first_name = models.CharField(max_length=55)
@@ -23,6 +27,10 @@ class Employee(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name} | {self.department}"
 
+    class Meta:
+        verbose_name = "employee"
+        verbose_name_plural = "employees"
+
 
 class About(models.Model):
     title = models.CharField(max_length=255)
@@ -30,6 +38,10 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = "about"
+        verbose_name_plural = "abouts"
 
 
 class Contact(models.Model):
@@ -39,3 +51,23 @@ class Contact(models.Model):
 
     def __str__(self):
         return f"{self.address} | {self.email} | {self.phone}"
+
+    class Meta:
+        verbose_name = "contact"
+        verbose_name_plural = "contacts"
+
+
+class Team(models.Model):
+    first_name = models.CharField(max_length=55)
+    last_name = models.CharField(max_length=55)
+    position = models.CharField(max_length=55)
+    about = models.TextField(max_length=255)
+    avatar = models.ImageField(
+        upload_to="team")
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} | {self.position}"
+
+    class Meta:
+        verbose_name = "team"
+        verbose_name_plural = "teams"
