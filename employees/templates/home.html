@@ -9,4 +9,33 @@
     <h1>Welcome to Employees</h1>
     <p>This is an our official website</p>
   </div>
+  <div class="mt-5">
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for slide in slides %}
+        <div class="swiper-slide position-static">
+          <div 
+            class="slider-conten position-absolute p-5"
+            style="
+              max-width: 400px; 
+              background: rgba(0, 0, 0, 0.8); 
+              color: #fff;
+              top: 50px;
+              left: 50px;
+            "
+          >
+            <h3>{{slide.title}}</h3>
+            <p>{{slide.descr}}</p>
+            {% if slide.link  %}
+              <a class="btn btn-success" href="{{slide.link}}">Read More</a>
+            {% endif %}
+          </div>
+          <img src="{{slide.img.url}}" alt="{{slide.title}}">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  </div>
 {% endblock %}
