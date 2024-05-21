@@ -1,10 +1,23 @@
 from django.shortcuts import render
-from .models import Department, Employee, About, Contact, Team, Slider
+from .models import (
+    Department,
+    Employee,
+    About,
+    Contact,
+    Team,
+    Slider,
+    SEO
+)
 
 
 def index(request):
     slides = Slider.objects.all()
-    return render(request, "home.html", {"slides": slides})
+    seo = SEO.objects.filter(tag="home")
+    return render(request, "home.html",
+                  {
+                      "slides": slides,
+                      "seo": seo
+                  })
 
 
 def employees(request):

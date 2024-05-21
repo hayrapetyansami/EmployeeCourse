@@ -85,3 +85,20 @@ class Slider(models.Model):
     class Meta:
         verbose_name = "slider"
         verbose_name_plural = "sliders"
+
+
+class SEO(models.Model):
+    tag = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
+    description = models.TextField(max_length=500)
+    keywords = models.CharField(max_length=255)
+    robots = models.CharField(max_length=255)
+    content_type = models.CharField(max_length=255)
+    language = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.tag}"
+
+    class Meta:
+        verbose_name = "seo"
+        verbose_name_plural = "seo"
