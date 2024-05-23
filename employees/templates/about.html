@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}
-  About
+{% block seoBlock %}
+  {% for item in seo %}
+    <title> {{item.title}} </title>
+    <meta name="title" content="{{item.title}}">
+    <meta name="description" content="{{item.description}}">
+    <meta name="keywords" content="{{item.keywords}}">
+    <meta name="robots" content="{{item.robots}}">
+    <meta http-equiv="Content-Type" content="{{item.content_type}}">
+    <meta name="language" content="{{item.language}}">
+  {% endfor %}
 {% endblock %}
 
 {% block about_template %}

@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}
-  About {{ member.first_name }} {{ member.last_name }}
+{% block seoBlock %}
+  {% for item in seo %}
+    <title> About {{ member.first_name }} {{ member.last_name }} | {{item.title}} </title>
+    <meta name="title" content="About {{ member.first_name }} {{ member.last_name }} | {{item.title}}">
+    <meta name="description" content="{{item.description}}">
+    <meta name="keywords" content="{{item.keywords}}">
+    <meta name="robots" content="{{item.robots}}">
+    <meta http-equiv="Content-Type" content="{{item.content_type}}">
+    <meta name="language" content="{{item.language}}">
+  {% endfor %}
 {% endblock %}
+
 
 {% block single_team_template %}
   <div class="card mt-5">
