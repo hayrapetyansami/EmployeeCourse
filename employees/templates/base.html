@@ -23,7 +23,7 @@
           >
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="mobileMenu">
+        <div class="collapse navbar-collapse gap-4" id="mobileMenu">
           <ul class="navbar-nav w-100 justify-content-end gap-3">
             <li class="nav-item">
               <a href="{% url 'app:employees' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Employees</a>
@@ -41,6 +41,16 @@
               <a href="/api/v1/" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Api</a>
             </li>
           </ul>
+          <div class="d-flex gap-2">
+            <form id="language-form" action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" id="language-input" name="language">
+            </form>
+  
+            {% for l in LANGUAGES %}
+                <button class="language-button btn btn-sm btn-info text-white" value="{{ l.0 }}">{{ l.1 }}</button>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </nav>

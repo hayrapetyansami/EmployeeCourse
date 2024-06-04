@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block seo_block %}
   {% for item in seo %}
@@ -24,8 +25,8 @@
 
 {% block home_template %}
   <div class="mt-5 text-center">
-    <h1>Welcome to Employees</h1>
-    <p>This is an our official website</p>
+    <h1>{% trans "Welcome To Our Website" %}</h1>
+    <p>{% trans "This is a some subtitle" %}</p>
   </div>
   <div class="mt-5">
     <div class="swiper mySwiper">
