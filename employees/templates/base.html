@@ -26,16 +26,16 @@
         <div class="collapse navbar-collapse gap-4" id="mobileMenu">
           <ul class="navbar-nav w-100 justify-content-end gap-3">
             <li class="nav-item">
-              <a href="{% url 'app:employees' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Employees</a>
+              <a href="{% url 'app:employees' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Employees"%}</a>
             </li>
             <li class="nav-item">
-              <a href="{% url 'app:about' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">About</a>
+              <a href="{% url 'app:about' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "About" %}</a>
             </li>
             <li class="nav-item">
-              <a href="{% url 'app:contact' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Contact</a>
+              <a href="{% url 'app:contact' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Contact" %}</a>
             </li>
             <li class="nav-item">
-              <a href="/admin" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Admin Panel</a>
+              <a href="/admin" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Admin Panel" %}</a>
             </li>
             <li class="nav-item">
               <a href="/api/v1/" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Api</a>
@@ -64,7 +64,7 @@
     </main>
     <footer>
       <div class="container">
-        All Rights Reserved &copy; 2024
+        {% trans "All Rights Reserved" %} &copy; 2024
       </div>
     </footer>
 

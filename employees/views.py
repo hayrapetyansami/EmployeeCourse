@@ -14,6 +14,7 @@ from .models import (
     OG,
 )
 
+
 def index(request):
     slides = Slider.objects.all()
     seo = SEO.objects.filter(tag="home")
@@ -22,8 +23,8 @@ def index(request):
         "slides": slides,
         "seo": seo,
         "og": og,
-        'redirect_to': request.GET.get('next', '/'),
     })
+
 
 def employees(request):
     employees = Employee.objects.all()
@@ -34,6 +35,7 @@ def employees(request):
         "seo": seo,
         "og": og
     })
+
 
 def about(request):
     about_text = About.objects.all()
@@ -47,6 +49,7 @@ def about(request):
         "og": og
     })
 
+
 def contact(request):
     contact_text = Contact.objects.all()
     seo = SEO.objects.filter(tag="contact")
@@ -56,6 +59,7 @@ def contact(request):
         "seo": seo,
         "og": og
     })
+
 
 def single_employee(request, employee_id):
     employee = Employee.objects.get(pk=employee_id)
@@ -67,6 +71,7 @@ def single_employee(request, employee_id):
         "og": og
     })
 
+
 def single_member(request, member_id):
     member = Team.objects.get(pk=member_id)
     seo = SEO.objects.filter(tag="single_member")
@@ -76,6 +81,7 @@ def single_member(request, member_id):
         "seo": seo,
         "og": og
     })
+
 
 @require_POST
 def change_lang(request):

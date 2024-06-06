@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-04 14:53+0400\n"
+"POT-Creation-Date: 2024-06-06 14:08+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\base\settings.py:108
-msgid "English"
-msgstr "English"
+#: .\employees\templates\base.html:29
+msgid "Employees"
+msgstr "Employees"
 
-#: .\base\settings.py:109
-msgid "Russian"
-msgstr "Russian"
+#: .\employees\templates\base.html:32
+msgid "About"
+msgstr "About"
 
-#: .\base\settings.py:110
-msgid "Armenian"
-msgstr "Armenian"
+#: .\employees\templates\base.html:35
+msgid "Contact"
+msgstr "Contact"
 
-#: .\employees\templates\home.html:29
+#: .\employees\templates\base.html:38
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#: .\employees\templates\base.html:67
+msgid "All Rights Reserved"
+msgstr "All Rights Reserved"
+
+#: .\employees\templates\home.html:28
 msgid "Welcome To Our Website"
 msgstr "Welcome To Our Website"
 
-#: .\employees\templates\home.html:30
+#: .\employees\templates\home.html:29
 msgid "This is a some subtitle"
 msgstr "This is a some subtitle"

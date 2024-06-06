@@ -16,34 +16,32 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\employees\templates\base.html:29
 msgid "Employees"
-msgstr "Сотрудники"
+msgstr "Empleados"
 
 #: .\employees\templates\base.html:32
 msgid "About"
-msgstr "О нас"
+msgstr "Acerca de"
 
 #: .\employees\templates\base.html:35
 msgid "Contact"
-msgstr "Контакты"
+msgstr "Contacto"
 
 #: .\employees\templates\base.html:38
 msgid "Admin Panel"
-msgstr "Панель администратора"
+msgstr "Panel de administrador"
 
 #: .\employees\templates\base.html:67
 msgid "All Rights Reserved"
-msgstr "Все права защищены"
+msgstr "Reservados todos los derechos"
 
 #: .\employees\templates\home.html:28
 msgid "Welcome To Our Website"
-msgstr "Добро пожаловать на наш веб-сайт"
+msgstr "Bienvenido a nuestro sitio web"
 
 #: .\employees\templates\home.html:29
 msgid "This is a some subtitle"
-msgstr "Это какой-то субтитр"
+msgstr "Este es un subtítulo."

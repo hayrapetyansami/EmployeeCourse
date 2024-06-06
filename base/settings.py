@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "employees.apps.EmployeesConfig",
     "api.apps.ApiConfig",
-    "tastypie"
+    "tastypie",
+    'rosetta',
 ]
 
 MIDDLEWARE = [
@@ -106,10 +107,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-LANGUAGES  = [
+LANGUAGES = [
     ("hy", "ARM"),
     ("ru", "RUS"),
     ("en", "ENG"),
+    ("es", "SPA"),
 ]
 
 LOCALE_PATHS = [
