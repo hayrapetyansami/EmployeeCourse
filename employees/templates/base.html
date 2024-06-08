@@ -34,12 +34,25 @@
             <li class="nav-item">
               <a href="{% url 'app:contact' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Contact" %}</a>
             </li>
-            <li class="nav-item">
+            {% comment %} <li class="nav-item">
               <a href="/admin" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Admin Panel" %}</a>
             </li>
             <li class="nav-item">
               <a href="/api/v1/" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Api</a>
+            </li> {% endcomment %}
+
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:logout' %}">Logout</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:login' %}">Login</a>
             </li>
+            <li class="nav-item">
+              <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:signup' %}">Sign Up</a>
+            </li>
+            {% endif %}
           </ul>
           <div class="d-flex gap-2">
             <form id="language-form" action="{% url 'set_language' %}" method="post">

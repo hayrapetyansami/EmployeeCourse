@@ -1,5 +1,4 @@
 from pathlib import Path
-from django.utils.translation import gettext_lazy
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -98,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'en-EN'
 
 TIME_ZONE = 'UTC'
 
@@ -141,3 +140,7 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 )
+
+LOGIN_URL = "app:login"
+LOGIN_REDIRECT_URL = "app:profile"
+LOGOUT_REDIRECT_URL = "app:index"
