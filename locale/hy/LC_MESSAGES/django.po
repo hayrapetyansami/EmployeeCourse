@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-06 14:08+0400\n"
-"PO-Revision-Date: 2024-06-06 14:19+0000\n"
+"POT-Creation-Date: 2024-06-11 15:16+0400\n"
+"PO-Revision-Date: 2024-06-11 15:23+0000\n"
 "Last-Translator: John Smith <johnsmith@employees.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -31,11 +31,25 @@ msgstr "Մեր Մասին"
 msgid "Contact"
 msgstr "Կապ"
 
-#: .\employees\templates\base.html:38
-msgid "Admin Panel"
-msgstr "Ադմինի Վահանակ"
+#: .\employees\templates\base.html:40
+msgid "Profile"
+msgstr "Օգտահաշիվ"
 
-#: .\employees\templates\base.html:67
+#: .\employees\templates\base.html:46
+msgid "Logout"
+msgstr "Ելք"
+
+#: .\employees\templates\base.html:51 .\employees\templates\login.html:6
+#: .\employees\templates\login.html:10
+msgid "Login"
+msgstr "Մուտք"
+
+#: .\employees\templates\base.html:54 .\employees\templates\signup.html:6
+#: .\employees\templates\signup.html:10
+msgid "Sign Up"
+msgstr "Գրանցվել"
+
+#: .\employees\templates\base.html:84
 msgid "All Rights Reserved"
 msgstr "Բոլոր Իրավունքները Պաշտպանված Են"
 
@@ -46,3 +60,10 @@ msgstr "Բարի գալուս մեր ՎԵԲ Կայք"
 #: .\employees\templates\home.html:29
 msgid "This is a some subtitle"
 msgstr "Սա ինչ-որ ենթավերնագիր է"
+
+#: .\employees\templates\profile.html:7
+msgid "Hello dear"
+msgstr "Ողջույն հարգելի"
+
+#~ msgid "Admin Panel"
+#~ msgstr "Ադմինի Վահանակ"

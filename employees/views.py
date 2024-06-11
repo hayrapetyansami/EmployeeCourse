@@ -28,6 +28,7 @@ def index(request):
         "slides": slides,
         "seo": seo,
         "og": og,
+        "request": request
     })
 
 

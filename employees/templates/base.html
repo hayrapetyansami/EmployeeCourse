@@ -34,24 +34,25 @@
             <li class="nav-item">
               <a href="{% url 'app:contact' %}" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Contact" %}</a>
             </li>
-            {% comment %} <li class="nav-item">
-              <a href="/admin" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">{% trans "Admin Panel" %}</a>
-            </li>
-            <li class="nav-item">
-              <a href="/api/v1/" target="_blank" style="color: #16bc5c" class="text-hover fs-5 text-decoration-none">Api</a>
-            </li> {% endcomment %}
+
+            {% if user.is_authenticated and request.resolver_match.url_name != 'profile' %}
+              <li class="nav-item">
+                <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:profile' %}">{% trans "Profile" %}</a>
+              </li>
+            {% endif %}
 
             {% if user.is_authenticated %}
               <li class="nav-item">
-                <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:logout' %}">Logout</a>
+                <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:logout' %}">{% trans "Logout" %}</a>
               </li>
+              
             {% else %}
-            <li class="nav-item">
-              <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:login' %}">Login</a>
-            </li>
-            <li class="nav-item">
-              <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:signup' %}">Sign Up</a>
-            </li>
+              <li class="nav-item">
+                <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:login' %}">{% trans "Login" %}</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: #16bc5c" class="text-hover fs-5 text-decoration-none" href="{% url 'app:signup' %}">{% trans "Sign Up" %}</a>
+              </li>
             {% endif %}
           </ul>
           <div class="d-flex gap-2">
@@ -74,6 +75,9 @@
       {% block single_team_template %}{% endblock %}
       {% block about_template %}{% endblock %}
       {% block contact_template %}{% endblock %}
+      {% block profile_template %}{% endblock %}
+      {% block login_template %}{% endblock %}
+      {% block signup_template %}{% endblock %}
     </main>
     <footer>
       <div class="container">

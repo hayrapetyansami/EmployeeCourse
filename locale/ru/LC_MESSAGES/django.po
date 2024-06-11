@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-06 14:08+0400\n"
+"POT-Creation-Date: 2024-06-11 15:15+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,11 +32,25 @@ msgstr "О нас"
 msgid "Contact"
 msgstr "Контакты"
 
-#: .\employees\templates\base.html:38
-msgid "Admin Panel"
-msgstr "Панель администратора"
+#: .\employees\templates\base.html:40
+msgid "Profile"
+msgstr "Профиль"
 
-#: .\employees\templates\base.html:67
+#: .\employees\templates\base.html:46
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\employees\templates\base.html:51 .\employees\templates\login.html:6
+#: .\employees\templates\login.html:10
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\employees\templates\base.html:54 .\employees\templates\signup.html:6
+#: .\employees\templates\signup.html:10
+msgid "Sign Up"
+msgstr "Зарегистрироваться"
+
+#: .\employees\templates\base.html:84
 msgid "All Rights Reserved"
 msgstr "Все права защищены"
 
@@ -47,3 +61,10 @@ msgstr "Добро пожаловать на наш веб-сайт"
 #: .\employees\templates\home.html:29
 msgid "This is a some subtitle"
 msgstr "Это какой-то субтитр"
+
+#: .\employees\templates\profile.html:7
+msgid "Hello dear"
+msgstr "Привет, дорогой"
+
+#~ msgid "Admin Panel"
+#~ msgstr "Панель администратора"
